@@ -1,0 +1,12 @@
+# generated grpc and protobuf files
+protos/*.pb.cc
+protos/*.pb.h
+protos/*.grpc.pb.cc
+protos/*.grpc.pb.h
+
+# VS Code
+.vscode
+
+# macOS
+.DS_Store
+DS_Store

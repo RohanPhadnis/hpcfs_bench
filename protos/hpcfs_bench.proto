@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package hpcfs_bench;
+
+service ControllerService {
+    rpc RunTests(stream TestRequest) returns (stream TestBatchResult);
+}
+
+service ClusterService {
+    rpc Comm(stream TestRequest) returns (stream TestResult);
+}
+
+enum Test {
+    UNKNOWN = 0;
+}
+
+message TestRequest {
+    Test test_index = 1;
+}
+message TestResult {
+    bool correct = 1;
+    uint64 duration = 2;
+    string message;
+}
+message TestBatchResult {
+    repeated TestResult resuts = 1;
+}
