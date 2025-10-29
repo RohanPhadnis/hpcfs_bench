@@ -20,7 +20,7 @@ message TestRequest {
 message TestResult {
     bool correct = 1;
     uint64 duration = 2;
-    string message;
+    string message = 3;
 }
 message TestBatchResult {
     repeated TestResult resuts = 1;

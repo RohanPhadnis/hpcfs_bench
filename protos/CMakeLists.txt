@@ -17,11 +17,11 @@ set(grpc_src ${CMAKE_CURRENT_SOURCE_DIR}/hpcfs_bench.grpc.pb.cc)
 set(grpc_hdr ${CMAKE_CURRENT_SOURCE_DIR}/hpcfs_bench.grpc.pb.h)
 set(pb_src ${CMAKE_CURRENT_SOURCE_DIR}/hpcfs_bench.pb.cc)
 set(pb_hdr ${CMAKE_CURRENT_SOURCE_DIR}/hpcfs_bench.pb.h)
-set(grpc_DIR /root/.local/lib/cmake/grpc)
+set(gRPC_DIR /root/.local/lib/cmake/grpc)
 
 find_package(absl)
 find_package(Protobuf)
-find_package(grpc)
+find_package(gRPC)
 
 add_library(hpcfs_bench_grpc_proto
     ${grpc_src}
