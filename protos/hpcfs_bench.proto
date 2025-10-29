@@ -3,7 +3,7 @@ syntax = "proto3";
 package hpcfs_bench;
 
 service ControllerService {
-    rpc RunTests(stream TestRequest) returns (stream TestBatchResult);
+    rpc RunTests(TestRequest) returns (TestBatchResult);
 }
 
 service ClusterService {
