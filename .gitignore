@@ -6,9 +6,18 @@ protos/*.pb.cc
 protos/*.pb.h
 protos/*.grpc.pb.cc
 protos/*.grpc.pb.h
+src/controller/hpcfs_bench_pb2.py
+src/controller/hpcfs_bench_pb2_grpc.py
 
 # VS Code
 .vscode
+
+# Python Environment
+.venv
+
+# Python Caches
+*/__pycache__/
+*/.ipynb_checkpoints/
 
 # macOS
 .DS_Store

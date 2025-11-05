@@ -3,18 +3,18 @@ syntax = "proto3";
 package hpcfs_bench;
 
 service ControllerService {
-    rpc RunTests(TestRequest) returns (TestBatchResult);
+    rpc RunTests(TestParams) returns (TestBatchResult);
 }
 
 service ClusterService {
-    rpc Comm(stream TestRequest) returns (stream TestResult);
+    rpc Comm(stream TestResult) returns (stream TestParams);
 }
 
 enum Test {
     UNKNOWN = 0;
 }
 
-message TestRequest {
+message TestParams {
     Test test_index = 1;
 }
 message TestResult {
